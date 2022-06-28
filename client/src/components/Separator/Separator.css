@@ -1,0 +1,12 @@
+.separator .img {
+  height: 1.4rem;
+  margin: 0 1rem;
+}
+
+.separator .line {
+  width: 3.5rem;
+  display: inline-block;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #d62828;
+}

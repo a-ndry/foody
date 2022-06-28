@@ -15,6 +15,7 @@
   background-color: #0000009e;
   background-blend-mode: overlay;
   background-attachment: fixed;
+  transition: background-image ease 0.3s;
 }
 .header h1 {
   font-size: 3rem;
