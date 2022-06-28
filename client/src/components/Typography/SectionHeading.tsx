@@ -11,7 +11,7 @@ const SectionHeading: FC<SectionHeadingProp> = ({
   variant,
   className,
 }) => {
-  let v = variant === "light" ? "text-white bg-dark " : "text-dark bg-white";
+  let v = variant === "light" ? "text-white bg-dark " : "text-dark";
   return (
     <h2 className={`${v} text-center fw-bold ${className}`}>{children}</h2>
   );
