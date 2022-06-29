@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import Separator from "../Separator/Separator";
 import SectionHeading from "../Typography/SectionHeading";
 import birthday from "../../assets/images/birthday-cake.svg";

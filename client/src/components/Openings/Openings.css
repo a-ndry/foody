@@ -1,0 +1,16 @@
+#openings {
+  background-image: url("/src/assets/images/opening-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000ba;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  clip-path: ellipse(100% 55% at 48% 44%);
+}
+#openings .day {
+  letter-spacing: 3px;
+}
+#openings .office {
+  letter-spacing: 2px;
+}
