@@ -1,4 +1,4 @@
-import { Button, Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import Separator from "../Separator/Separator";
 import SectionHeading from "../Typography/SectionHeading";
 import breakfast from "../../assets/images/food-breakfast.jpg";
@@ -8,6 +8,7 @@ import lunch from "../../assets/images/food-lunch.jpg";
 import dinner from "../../assets/images/food-dinner.jpg";
 import burger from "../../assets/images/food-burger.jpg";
 import { FC } from "react";
+import Button from "../Button/Button";
 
 interface IMenu {
   title: string;
