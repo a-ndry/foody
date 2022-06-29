@@ -7,6 +7,7 @@ import pizza from "../../assets/images/food-pizza.jpg";
 import lunch from "../../assets/images/food-lunch.jpg";
 import dinner from "../../assets/images/food-dinner.jpg";
 import burger from "../../assets/images/food-burger.jpg";
+import { FC } from "react";
 
 interface IMenu {
   title: string;
@@ -63,7 +64,7 @@ const Menu = () => {
         <Row xs={1} lg={2} className="mt-5 mb-3">
           {menus.map((menu) => (
             <Col className="mb-3" key={menu.title}>
-              {makeMenuCard(menu)}
+              <MenuCard menuDetail={menu} />
             </Col>
           ))}
         </Row>
@@ -72,7 +73,11 @@ const Menu = () => {
   );
 };
 
-const makeMenuCard = (menuDetail: IMenu) => {
+interface IMenuCard {
+  menuDetail: IMenu;
+}
+
+const MenuCard: FC<IMenuCard> = ({ menuDetail }) => {
   return (
     <Card className="flex-row border-0 align-items-center gap-3">
       <Card.Img src={menuDetail.src} style={{ width: "50%" }} />

@@ -7,6 +7,7 @@ import sarah from "../../assets/images/team-3.jpg";
 import jack from "../../assets/images/team-4.jpg";
 import Icon from "../Icon/Icon";
 import "./Chefs.css";
+import { FC } from "react";
 
 interface IChef {
   name: string;
@@ -96,14 +97,14 @@ const chefs: IChef[] = [
 
 const Chefs = () => {
   return (
-    <div id="team" className="py-5 text-center">
+    <div id="team" className="bg-light py-5 text-center">
       <Container className="pt-5 pb-4 px-lg-5 px-xl-0">
         <SectionHeading>Our Chef Masters</SectionHeading>
         <Separator />
         <Row xs={1} md={2} xl={4} className="mt-5 mb-3">
           {chefs.map((chef) => (
             <Col className="mb-2" key={chef.name}>
-              {makeChefCard(chef)}
+              <ChefCard chef={chef} />
             </Col>
           ))}
         </Row>
@@ -112,7 +113,10 @@ const Chefs = () => {
   );
 };
 
-const makeChefCard = (chef: IChef) => {
+interface IChefCard {
+  chef: IChef;
+}
+const ChefCard: FC<IChefCard> = ({ chef }) => {
   return (
     <Card className="chef-card border-0">
       <Card.Img src={chef.image} />

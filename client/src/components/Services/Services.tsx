@@ -4,8 +4,15 @@ import SectionHeading from "../Typography/SectionHeading";
 import birthday from "../../assets/images/birthday-cake.svg";
 import glass from "../../assets/images/glass-cheers.svg";
 import pizza from "../../assets/images/pizza-slice.svg";
+import { FC } from "react";
 
-const cards = [
+interface ICard {
+  src: string;
+  title: string;
+  body: string;
+}
+
+const cards: ICard[] = [
   {
     src: birthday,
     title: "Birthday Party",
@@ -33,7 +40,7 @@ const Services = () => {
           {cards.map((card) => {
             return (
               <Col lg="4" className="mt-5" key={card.title}>
-                {makeCard(card)}
+                <ServiceCard cardDetail={card} />
               </Col>
             );
           })}
@@ -43,12 +50,10 @@ const Services = () => {
   );
 };
 
-interface ICard {
-  src: string;
-  title: string;
-  body: string;
+interface IServiceCard {
+  cardDetail: ICard;
 }
-const makeCard = (cardDetail: ICard) => {
+const ServiceCard: FC<IServiceCard> = ({ cardDetail }) => {
   return (
     <Card className="border-0 bg-light text-center">
       <Card.Img
