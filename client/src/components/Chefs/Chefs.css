@@ -1,0 +1,8 @@
+.chef-card .chef-networks {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.3s;
+}
+.chef-card:hover .chef-networks {
+  height: 3rem;
+}

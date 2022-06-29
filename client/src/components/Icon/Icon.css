@@ -1,0 +1,13 @@
+.icon.icon-dark {
+  color: #252525;
+  transition: color ease 0.2s;
+}
+a.icon.icon-dark:hover {
+  color: #d62828;
+}
+.icon.icon-light {
+  color: #fff;
+}
+a.icon.icon-light:hover {
+  color: #252525;
+}
