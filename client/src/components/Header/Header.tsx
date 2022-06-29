@@ -24,7 +24,7 @@ const headers: HeaderContent[] = [
   {
     src: "/src/assets/images/banner-bg-2.jpg",
     title: "Pizza and divine taste",
-    subtitle: "YOUR CAN'T MAKE EVERYONE HAPPY. YOU ARE NOT PIZZA.",
+    subtitle: "YOU CAN'T MAKE EVERYONE HAPPY. YOU ARE NOT PIZZA.",
     cta: {
       to: "/",
       text: "order now",
@@ -55,7 +55,7 @@ const Header = () => {
     const interval = setInterval(() => {
       setHeaderContent(getNextHeaderContent());
       currentHeaderContentIdx += 1;
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
