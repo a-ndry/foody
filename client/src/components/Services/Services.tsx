@@ -25,7 +25,7 @@ const cards = [
 
 const Services = () => {
   return (
-    <div className="py-5 bg-light">
+    <div id="service" className="py-5 bg-light">
       <Container className="pt-5 pb-4 px-lg-5 px-xl-0">
         <SectionHeading>Special Services</SectionHeading>
         <Separator />

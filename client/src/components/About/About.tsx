@@ -6,7 +6,7 @@ import img2 from "../../assets/images/about-img-2.jpg";
 
 const About = () => {
   return (
-    <div className="py-5 bg-white">
+    <div id="about" className="py-5 bg-white">
       <Container className="pt-5 pb-4">
         <Row>
           <Col xl={3} className="d-none d-xl-block">

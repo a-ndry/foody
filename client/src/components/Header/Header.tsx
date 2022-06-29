@@ -62,6 +62,7 @@ const Header = () => {
 
   return (
     <header
+      id="header"
       style={{ backgroundImage: `url(${headerContent.src})` }}
       className="header text-white text-center d-flex flex-column align-items-center justify-content-center p-4"
     >

@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   return (
-    <BSNavbar bg="light" expand="lg" className="navbar px-5 shadow sticky-top">
+    <BSNavbar bg="light" expand="lg" className="navbar shadow sticky-top">
       <Container>
         <BSNavbar.Brand href="#home">
           <Logo />
@@ -11,7 +11,7 @@ const Navbar = () => {
         <BSNavbar.Toggle aria-controls="navbar-nav" />
         <BSNavbar.Collapse id="basic-BSnavbar-nav">
           <Nav className="ms-auto gap-2 text-uppercase">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#header">Home</Nav.Link>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#service">service</Nav.Link>
             <Nav.Link href="#openings">openings</Nav.Link>
