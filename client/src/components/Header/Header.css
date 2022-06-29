@@ -17,6 +17,15 @@
   background-attachment: fixed;
   transition: background-image ease 0.3s;
 }
+.header-1 {
+  background-image: url("../../assets/images/banner-bg-1.jpg");
+}
+.header-2 {
+  background-image: url("../../assets/images/banner-bg-2.jpg");
+}
+.header-3 {
+  background-image: url("../../assets/images/banner-bg-3.jpg");
+}
 .header h1 {
   font-size: 3rem;
 }

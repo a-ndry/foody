@@ -3,7 +3,10 @@ import { Button } from "react-bootstrap";
 import "./Header.css";
 
 export interface HeaderContent {
-  src: string;
+  // we're using local assets, so the way we change the image is by assigning different class
+  // for each background image. That way, the relative path used can be resolved at build time
+  // so we use the "srcId" field as the class name for that purpose
+  srcId: string;
   title: string;
   subtitle: string;
   cta: {
@@ -13,7 +16,7 @@ export interface HeaderContent {
 }
 const headers: HeaderContent[] = [
   {
-    src: "/src/assets/images/banner-bg-1.jpg",
+    srcId: "header-1",
     title: "Chase The Flavors",
     subtitle: "FOOD IS THE INGREDIENT THAT BINDS US TOGETHER.",
     cta: {
@@ -22,7 +25,7 @@ const headers: HeaderContent[] = [
     },
   },
   {
-    src: "/src/assets/images/banner-bg-2.jpg",
+    srcId: "header-2",
     title: "Pizza and divine taste",
     subtitle: "YOU CAN'T MAKE EVERYONE HAPPY. YOU ARE NOT PIZZA.",
     cta: {
@@ -31,7 +34,7 @@ const headers: HeaderContent[] = [
     },
   },
   {
-    src: "/src/assets/images/banner-bg-3.jpg",
+    srcId: "header-3",
     title: "Paradise on your plate",
     subtitle: " PEOPLE WHO LOVE TO EAT ARE ALWAYS THE BEST PEOPLE.",
     cta: {
@@ -63,8 +66,8 @@ const Header = () => {
   return (
     <header
       id="header"
-      style={{ backgroundImage: `url(${headerContent.src})` }}
-      className="header text-white text-center d-flex flex-column align-items-center justify-content-center p-4"
+      className={`${headerContent.srcId} header text-white text-center 
+        d-flex flex-column align-items-center justify-content-center p-4`}
     >
       <h1 className="fw-bold mb-4">{headerContent.title}</h1>
       <p className="text-uppercase mb-4">{headerContent.subtitle}</p>
