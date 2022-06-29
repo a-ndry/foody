@@ -80,10 +80,14 @@ interface IMenuCard {
 
 const MenuCard: FC<IMenuCard> = ({ menuDetail }) => {
   return (
-    <Card className="flex-row border-0 align-items-center gap-3">
-      <Card.Img src={menuDetail.src} style={{ width: "50%" }} />
+    <Card className="flex-row border-0 align-items-center">
+      <Card.Img
+        src={menuDetail.src}
+        className="pe-3"
+        style={{ width: "50%" }}
+      />
       <Card.Body>
-        <Card.Title className="text-secondary d-flex justify-content-between gap-3">
+        <Card.Title className="text-secondary d-flex justify-content-between  flex-wrap">
           <span className="type text-capitalize">{menuDetail.title}</span>
           <span className="price">${menuDetail.price}</span>
         </Card.Title>
