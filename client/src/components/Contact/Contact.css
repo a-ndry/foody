@@ -1,0 +1,14 @@
+.contact-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.contact-form input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border-color: #252525 !important;
+}
+@media screen and (min-width: 576px) {
+  .contact-form {
+    max-width: 600px;
+  }
+}

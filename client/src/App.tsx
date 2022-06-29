@@ -2,6 +2,7 @@ import "./App.css";
 import "./assets/vendors/bootstrap-icons/bootstrap-icons.css";
 import About from "./components/About/About";
 import Chefs from "./components/Chefs/Chefs";
+import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
 import Navbar from "./components/Navbar/Navbar";
@@ -18,6 +19,7 @@ function App() {
       <Openings />
       <Menu />
       <Chefs />
+      <Contact />
     </div>
   );
 }
