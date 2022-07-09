@@ -1,10 +1,7 @@
+import { FC } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Separator from "../Separator/Separator";
 import SectionHeading from "../Typography/SectionHeading";
-import birthday from "../../assets/images/birthday-cake.svg";
-import glass from "../../assets/images/glass-cheers.svg";
-import pizza from "../../assets/images/pizza-slice.svg";
-import { FC } from "react";
 
 interface ICard {
   src: string;
@@ -14,17 +11,17 @@ interface ICard {
 
 const cards: ICard[] = [
   {
-    src: birthday,
+    src: "/images/birthday-cake.svg",
     title: "Birthday Party",
     body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, at? Aspernatur aliquam deserunt eum odio veniam. Ipsa quo, quisquam cupiditate dolores ab doloremque expedita dolore obcaecati incidunt. Voluptas, inventore dolorum.",
   },
   {
-    src: glass,
+    src: "/images/glass-cheers.svg",
     title: "Wedding Party",
     body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, at? Aspernatur aliquam deserunt eum odio veniam. Ipsa quo, quisquam cupiditate dolores ab doloremque expedita dolore obcaecati incidunt. Voluptas, inventore dolorum.",
   },
   {
-    src: pizza,
+    src: "/images/pizza-slice.svg",
     title: "Business Meetings",
     body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, at? Aspernatur aliquam deserunt eum odio veniam. Ipsa quo, quisquam cupiditate dolores ab doloremque expedita dolore obcaecati incidunt. Voluptas, inventore dolorum.",
   },

@@ -3,41 +3,38 @@ import { Button } from "react-bootstrap";
 import "./Header.css";
 
 export interface HeaderContent {
-  // we're using local assets, so the way we change the image is by assigning different class
-  // for each background image. That way, the relative path used can be resolved at build time
-  // so we use the "srcId" field as the class name for that purpose
-  srcId: string;
+  src: string;
   title: string;
   subtitle: string;
-  cta: {
+  clickToAction: {
     to: string;
     text: string;
   };
 }
 const headers: HeaderContent[] = [
   {
-    srcId: "header-1",
+    src: "/images/banner-bg-1.jpg",
     title: "Chase The Flavors",
     subtitle: "FOOD IS THE INGREDIENT THAT BINDS US TOGETHER.",
-    cta: {
+    clickToAction: {
       to: "/",
       text: "Taste now",
     },
   },
   {
-    srcId: "header-2",
+    src: "/images/banner-bg-2.jpg",
     title: "Pizza and divine taste",
     subtitle: "YOU CAN'T MAKE EVERYONE HAPPY. YOU ARE NOT PIZZA.",
-    cta: {
+    clickToAction: {
       to: "/",
       text: "order now",
     },
   },
   {
-    srcId: "header-3",
+    src: "/images/banner-bg-3.jpg",
     title: "Paradise on your plate",
     subtitle: " PEOPLE WHO LOVE TO EAT ARE ALWAYS THE BEST PEOPLE.",
-    cta: {
+    clickToAction: {
       to: "/",
       text: "learn more",
     },
@@ -66,17 +63,17 @@ const Header = () => {
   return (
     <header
       id="header"
-      className={`${headerContent.srcId} header text-white text-center 
-        d-flex flex-column align-items-center justify-content-center p-4`}
+      style={{ backgroundImage: `url(${headerContent.src})` }}
+      className="header text-white text-center d-flex flex-column align-items-center justify-content-center p-4"
     >
       <h1 className="fw-bold mb-4">{headerContent.title}</h1>
       <p className="text-uppercase mb-4">{headerContent.subtitle}</p>
       <Button
+        href={headerContent.clickToAction.to}
         variant="outline-light"
         className="rounded-0 text-uppercase px-4 py-2 border-3"
-        href={headerContent.cta.to}
       >
-        {headerContent.cta.text}
+        {headerContent.clickToAction.text}
       </Button>
     </header>
   );

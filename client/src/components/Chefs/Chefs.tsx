@@ -1,10 +1,6 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
 import Separator from "../Separator/Separator";
 import SectionHeading from "../Typography/SectionHeading";
-import john from "../../assets/images/team-1.jpg";
-import mike from "../../assets/images/team-2.jpg";
-import sarah from "../../assets/images/team-3.jpg";
-import jack from "../../assets/images/team-4.jpg";
 import Icon from "../Icon/Icon";
 import "./Chefs.css";
 import { FC } from "react";
@@ -20,7 +16,7 @@ const chefs: IChef[] = [
   {
     name: "John Doe",
     role: "senior chef",
-    image: john,
+    image: "/images/team-1.jpg",
     networks: [
       {
         platform: "facebook",
@@ -39,7 +35,7 @@ const chefs: IChef[] = [
   {
     name: "Mike Doe",
     role: "senior chef",
-    image: mike,
+    image: "/images/team-2.jpg",
     networks: [
       {
         platform: "facebook",
@@ -58,7 +54,7 @@ const chefs: IChef[] = [
   {
     name: "Sarah Doe",
     role: "senior chef",
-    image: sarah,
+    image: "/images/team-3.jpg",
     networks: [
       {
         platform: "facebook",
@@ -77,7 +73,7 @@ const chefs: IChef[] = [
   {
     name: "Jack Doe",
     role: "senior chef",
-    image: jack,
+    image: "/images/team-4.jpg",
     networks: [
       {
         platform: "facebook",
@@ -119,7 +115,7 @@ interface IChefCard {
 const ChefCard: FC<IChefCard> = ({ chef }) => {
   return (
     <Card className="chef-card border-0">
-      <Card.Img src={chef.image} />
+      <Card.Img src={chef.image} alt={chef.name} />
       <Card.ImgOverlay
         className="bg-white rounded-0 py-4"
         style={{ top: "auto" }}

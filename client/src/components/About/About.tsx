@@ -1,8 +1,6 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Separator from "../Separator/Separator";
 import SectionHeading from "../Typography/SectionHeading";
-import img1 from "../../assets/images/about-img-1.jpg";
-import img2 from "../../assets/images/about-img-2.jpg";
 
 const About = () => {
   return (
@@ -10,7 +8,7 @@ const About = () => {
       <Container className="pt-5 pb-4">
         <Row>
           <Col xl={3} className="d-none d-xl-block">
-            <Image fluid src={img1} />
+            <Image fluid src="/images/about-img-1.jpg" alt="Images about." />
           </Col>
           <Col xl={6}>
             <SectionHeading>About Foody Restaurant</SectionHeading>
@@ -32,7 +30,7 @@ const About = () => {
             </p>
           </Col>
           <Col xl={3} className="d-none d-xl-block">
-            <Image fluid src={img2} />
+            <Image fluid src="/images/about-img-2.jpg" alt="Images about." />
           </Col>
         </Row>
       </Container>

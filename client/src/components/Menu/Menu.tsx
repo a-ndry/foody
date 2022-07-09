@@ -1,14 +1,8 @@
+import { FC } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
+import Button from "../Button/Button";
 import Separator from "../Separator/Separator";
 import SectionHeading from "../Typography/SectionHeading";
-import breakfast from "../../assets/images/food-breakfast.jpg";
-import chicken from "../../assets/images/food-chicken.jpg";
-import pizza from "../../assets/images/food-pizza.jpg";
-import lunch from "../../assets/images/food-lunch.jpg";
-import dinner from "../../assets/images/food-dinner.jpg";
-import burger from "../../assets/images/food-burger.jpg";
-import { FC } from "react";
-import Button from "../Button/Button";
 
 interface IMenu {
   title: string;
@@ -21,37 +15,37 @@ const menus: IMenu[] = [
   {
     title: "Breakfast",
     description: "Lorem ipsum dolor sit amet consectetur.",
-    src: breakfast,
+    src: "/images/food-breakfast.jpg",
     price: 10,
   },
   {
     title: "chicken",
     description: "Lorem ipsum dolor sit amet consectetur.",
-    src: chicken,
+    src: "/images/food-chicken.jpg",
     price: 10,
   },
   {
     title: "lunch",
     description: "Lorem ipsum dolor sit amet consectetur.",
-    src: lunch,
+    src: "/images/food-lunch.jpg",
     price: 10,
   },
   {
     title: "pizza",
     description: "Lorem ipsum dolor sit amet consectetur.",
-    src: pizza,
+    src: "/images/food-pizza.jpg",
     price: 10,
   },
   {
     title: "dinner",
     description: "Lorem ipsum dolor sit amet consectetur.",
-    src: dinner,
+    src: "/images/food-dinner.jpg",
     price: 10,
   },
   {
     title: "burger",
     description: "Lorem ipsum dolor sit amet consectetur.",
-    src: burger,
+    src: "/images/food-burger.jpg",
     price: 10,
   },
 ];
@@ -83,10 +77,10 @@ const MenuCard: FC<IMenuCard> = ({ menuDetail }) => {
     <Card className="flex-row border-0 align-items-center">
       <Card.Img
         src={menuDetail.src}
-        className="pe-3"
-        style={{ width: "50%" }}
+        alt={menuDetail.title}
+        className="pe-3 w-50"
       />
-      <Card.Body>
+      <Card.Body className="w-50">
         <Card.Title className="text-secondary d-flex justify-content-between  flex-wrap">
           <span className="type text-capitalize">{menuDetail.title}</span>
           <span className="price">${menuDetail.price}</span>
