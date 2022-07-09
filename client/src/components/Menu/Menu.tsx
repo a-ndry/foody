@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import Button from "../Button/Button";
 import Separator from "../Separator/Separator";
@@ -73,13 +73,31 @@ interface IMenuCard {
 }
 
 const MenuCard: FC<IMenuCard> = ({ menuDetail }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const imgSrc = cardRef.current?.querySelector<HTMLElement>(".img-src");
+    const imgElt = cardRef.current?.querySelector<HTMLImageElement>(".img-elt");
+    if (!imgSrc || !imgElt) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          entries[0].target.setAttribute("src", imgSrc.textContent || "");
+          observer.unobserve(entries[0].target);
+        }
+      },
+      {
+        rootMargin: "-100px",
+      }
+    );
+    observer.observe(imgElt);
+  }, []);
+
   return (
-    <Card className="flex-row border-0 align-items-center">
-      <Card.Img
-        src={menuDetail.src}
-        alt={menuDetail.title}
-        className="pe-3 w-50"
-      />
+    <Card ref={cardRef} className="flex-row border-0 align-items-center">
+      <span className="img-src d-none">{menuDetail.src}</span>
+      <Card.Img alt={menuDetail.title} className="img-elt pe-3 w-50" />
       <Card.Body className="w-50">
         <Card.Title className="text-secondary d-flex justify-content-between  flex-wrap">
           <span className="type text-capitalize">{menuDetail.title}</span>
