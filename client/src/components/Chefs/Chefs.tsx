@@ -4,6 +4,7 @@ import SectionHeading from "../Typography/SectionHeading";
 import Icon from "../Icon/Icon";
 import "./Chefs.css";
 import { FC } from "react";
+import ImageLazy from "../ImageLazy/ImageLazy";
 
 interface IChef {
   name: string;
@@ -115,7 +116,7 @@ interface IChefCard {
 const ChefCard: FC<IChefCard> = ({ chef }) => {
   return (
     <Card className="chef-card border-0">
-      <Card.Img src={chef.image} alt={chef.name} />
+      <ImageLazy src={chef.image} alt={chef.name} />
       <Card.ImgOverlay
         className="bg-white rounded-0 py-4"
         style={{ top: "auto" }}
