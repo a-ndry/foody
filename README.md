@@ -1,3 +1,3 @@
 # foody
 
-A landing page for a restaurant
+A landing page for a restaurant.
